@@ -1,0 +1,29 @@
+Question: How do I update my personal details like my address or bank account?
+Answer: Log into the internal employee self-service portal, go to your profile settings, and update your banking or residential information under the "Personal Info" tab. For payroll bank changes, submit a voided check to HR.
+
+Question: What is our company policy on remote and hybrid work?
+Answer: Employees are allowed up to two days of remote work per week, subject to manager approval and team scheduling needs. Core working hours must still be observed regardless of location.
+
+Question: How many paid time off (PTO) days do I get each year?
+Answer: Full-time employees receive 20 days of PTO annually, accrued on a monthly basis. Unused days roll over up to a maximum of 5 days into the next calendar year.
+
+Question: What health insurance benefits are available to me?
+Answer: The company offers comprehensive medical, dental, and vision coverage through our primary provider. You can enroll or modify your dependents during the annual open enrollment period every November.
+
+Question: How do I request approval for professional development courses?
+Answer: Fill out the educational assistance form available on the HR intranet and get sign-off from your direct supervisor. The company reimburses up to $1,500 per year for approved career-related certifications or courses.
+
+Question: What should I do if I experience or witness workplace harassment?
+Answer: Report the incident immediately to the HR grievance committee or use our anonymous ethics hotline. All reports are investigated confidentially with a strict zero-tolerance policy for retaliation.
+
+Question: How does the annual performance review process work?
+Answer: Performance reviews occur bi-annually in June and December. Employees complete a self-evaluation, followed by a review meeting and goal-setting session with their manager.
+
+Question: What is the process for taking parental leave?
+Answer: Eligible employees receive up to 12 weeks of paid parental leave following the birth or adoption of a child. Notify HR at least 30 days in advance with the expected timeline to coordinate coverage.
+
+Question: Where can I find our company safety and emergency guidelines?
+Answer: Detailed emergency evacuation plans and safety protocols are posted on every floor near the elevators and on the company handbook page. Safety wardens conduct bi-annual fire drills for all staff.
+
+Question: Who do I contact for payroll discrepancies or tax withholding questions?
+Answer: Reach out directly to the payroll division via the internal ticketing system or email [payroll@company.com](mailto:payroll@company.com). Changes to state or federal tax withholdings can be updated directly via the payroll portal.

@@ -8,6 +8,7 @@ from agents import (
     RunContextWrapper,
     Runner,
     TResponseInputItem,
+    WebSearchTool,
     function_tool,
     input_guardrail,
 )
@@ -61,7 +62,7 @@ exa_search_mcp = MCPServerStreamableHttp(
     name="Exa Search MCP",
     params={
         "url": f"https://mcp.exa.ai/mcp?{os.environ.get('EXA_API_KEY')}",
-        "timeout": 90,
+        "timeout": 150,
     },
     client_session_timeout_seconds=90,
     cache_tools_list=True,
@@ -115,12 +116,13 @@ breakfast_planner_tool = healthy_breakfast_planner_agent.as_tool(
 breakfast_price_checker_agent = Agent(
     name="Breakfast Price Checker Assistant",
     instructions="""
+    * You always give prices in Indian Rupees (INR).
     * You are a helpful assistant that takes multiple breakfast items (with ingredients and calories) and checks for the price of the ingredients.
     * Use the exa search to get an approximate price for the ingredients.
     * In your final output prove the meal name, ingredients with calories and price for each meal.
     * Use markdown and be as concise as possible.
     """,
-    mcp_servers=[exa_search_mcp],
+    tools=[WebSearchTool()],
 )
 
 # 4th Agent: Main Breakfast Advisor that glues everything together
@@ -174,6 +176,7 @@ async def food_topic_guardrail(
 calorie_agent_with_search_guarded = Agent(
     name="Nutrition Assistant",
     instructions="""
+    * Along with suggesting meal options, you always give the prices for the meal/ingredients in INR.
     * You are a helpful nutrition assistant giving out calorie information.
     * You give concise answers.
     * You follow this workflow:
@@ -186,9 +189,11 @@ calorie_agent_with_search_guarded = Agent(
     * Once you know the ingredients, use the calorie_lookup_tool to get the calorie information of the individual ingredients.
     * If the query is about the meal, in your final output give a list of ingredients with their quantities and calories for a single serving. Also display the total calories.
     * Don't use the calorie_lookup_tool more than 10 times.
+    * You can use the WebSearchTool to search for the ingredients of the meal if you don't know them.
+    * You can use the WebSearchTool to search the real time prices in INR.
     * You only answer questions about food.
     """,
-    tools=[calorie_lookup_tool],
+    tools=[calorie_lookup_tool, WebSearchTool()],
     mcp_servers=[exa_search_mcp],
     input_guardrails=[food_topic_guardrail],
 )

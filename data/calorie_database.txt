@@ -22647,7 +22647,7 @@ This is a pastries,breads&rolls food item that provides 326 calories per 100 gra
 
 ---
 
-Food: Banana Nut Bread
+Food:  Nut BreaBananad
 Category: Pastries,Breads&Rolls
 Nutritional Information:
 - Calories: 326 per 100g
